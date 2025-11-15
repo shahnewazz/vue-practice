@@ -10,6 +10,21 @@ body {
   code {
     @apply bg-red-100 text-red-500 font-medium text-sm  px-3 rounded inline-block font-mono;
   }
+  button {
+    @apply bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 cursor-pointer;
+  }
+  ul {
+    @apply list-disc list-inside;
+  }
+  ul li span{
+    @apply font-bold text-green-800 inline-block mb-3;
+  }
+  ul li {
+    @apply mb-2;
+  }
+  ul li ul{
+    @apply ps-4 mb-2;
+  }
 }
 
 @layer components {
