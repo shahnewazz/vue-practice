@@ -1,11 +1,12 @@
 <script setup>
-import { ref } from 'vue';
+import { capitalize, ref } from 'vue';
 import ChildComponent from './components/ChildComponent.vue';
 import Count from './components/Count.vue';
 import CountWithArg from './components/CountWithArg.vue';
 import EventValidation from './components/EventValidation.vue';
 import Input from './components/Input.vue';
-import InputWithComputed from './components/InputWithComputed.vue';
+import InputWithComputed from './components/InputWithComputed.vue'; 
+import ModelModifier from './components/ModelModifier.vue';
 
 function showChildEvent(message) {
   alert(message);
@@ -70,6 +71,11 @@ const address = ref('');
       <InputWithComputed v-model="fullName" />
       <p>Address: {{ address }}</p>
       <InputWithComputed v-model="address" />
+    </div>
+    <div class="topic-box">
+      <h2 class="topic-header">Model Modifier with v-model</h2>
+      <p>Full Name: {{ fullName }}</p>
+      <ModelModifier v-model.capitalize="fullName" />
     </div>
   </div>
 </template>
